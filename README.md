@@ -43,3 +43,11 @@
 
 ## 说明
 当前项目已完成本地构建验证，可直接继续开发与扩展。
+
+## 部署到 GitHub Pages
+- 已配置 GitHub Actions 自动部署。
+- 推送到 `main` 分支后会自动构建并发布 `dist`。
+- 预计访问地址：
+   - https://ivanamamiya.github.io/self-intro-template/
+
+如首次部署未生效，请在仓库 Settings → Pages 中确认 Source 为 `GitHub Actions`。
