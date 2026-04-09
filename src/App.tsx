@@ -22,6 +22,7 @@ export default function App() {
 function AppContent() {
   const { data, setField, setContact, setTheme, reset, saveNow } = useProfileForm();
   const tx = (key: Parameters<typeof t>[1], params?: Record<string, string>) => t(data.locale, key, params);
+  const repoUrl = 'https://github.com/IvanAmamiya/self-intro-template';
 
   const previewRef = useRef<HTMLDivElement>(null);
   const [exporting, setExporting] = useState(false);
@@ -94,6 +95,32 @@ function AppContent() {
           </div>
         </div>
       </div>
+
+      <section className="project-notice panel">
+        <h2>{tx('pageInfoTitle')}</h2>
+
+        <h3>{tx('privacyStatementTitle')}</h3>
+        <ul>
+          <li>{tx('privacyFrontendOnly')}</li>
+          <li>{tx('privacyNoDatabase')}</li>
+          <li>{tx('privacyNoCollection')}</li>
+          <li>{tx('privacyLocalStorageOnly')}</li>
+        </ul>
+
+        <h3>{tx('repoTitle')}</h3>
+        <p>
+          <a href={repoUrl} target="_blank" rel="noreferrer">
+            {tx('repoLinkText')}
+          </a>
+        </p>
+
+        <h3>{tx('styleSuggestionTitle')}</h3>
+        <ul>
+          <li>{tx('styleSuggestionA')}</li>
+          <li>{tx('styleSuggestionB')}</li>
+          <li>{tx('styleSuggestionC')}</li>
+        </ul>
+      </section>
     </main>
   );
 }

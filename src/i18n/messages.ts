@@ -74,7 +74,19 @@ export type MessageKey =
   | 'contactSection'
   | 'emptyBasicInfo'
   | 'untitled'
-  | 'notFilled';
+  | 'notFilled'
+  | 'pageInfoTitle'
+  | 'privacyStatementTitle'
+  | 'privacyFrontendOnly'
+  | 'privacyNoDatabase'
+  | 'privacyNoCollection'
+  | 'privacyLocalStorageOnly'
+  | 'repoTitle'
+  | 'repoLinkText'
+  | 'styleSuggestionTitle'
+  | 'styleSuggestionA'
+  | 'styleSuggestionB'
+  | 'styleSuggestionC';
 
 const zhCN: Record<MessageKey, string> = {
   appTitle: '二次元扩列自介条生成器',
@@ -151,6 +163,18 @@ const zhCN: Record<MessageKey, string> = {
   emptyBasicInfo: '请补充基础信息',
   untitled: '未命名',
   notFilled: '未填写',
+  pageInfoTitle: '项目说明与建议',
+  privacyStatementTitle: '隐私条款（页面公示）',
+  privacyFrontendOnly: '本项目是纯前端应用，无后端服务。',
+  privacyNoDatabase: '不接入数据库，不上传你的输入内容。',
+  privacyNoCollection: '不收集个人信息，无埋点统计、无用户画像。',
+  privacyLocalStorageOnly: '草稿仅保存在浏览器 localStorage，可自行清除。',
+  repoTitle: 'GitHub 仓库地址',
+  repoLinkText: '查看项目源码（GitHub）',
+  styleSuggestionTitle: '新样式建议（下一步）',
+  styleSuggestionA: '手账贴纸风：纸纹背景 + 胶带贴纸 + 圆角便签卡。',
+  styleSuggestionB: '漫画分镜风：粗描边模块 + 对话气泡信息块。',
+  styleSuggestionC: '玻璃拟态风：半透明卡片 + 柔和高光 + 渐变背景。',
 };
 
 const enUS: Record<MessageKey, string> = {
@@ -228,6 +252,18 @@ const enUS: Record<MessageKey, string> = {
   emptyBasicInfo: 'Please fill basic info',
   untitled: 'Untitled',
   notFilled: 'Not filled',
+  pageInfoTitle: 'Project Info & Suggestions',
+  privacyStatementTitle: 'Privacy Statement',
+  privacyFrontendOnly: 'This project is frontend-only with no backend service.',
+  privacyNoDatabase: 'No database is connected and your input is not uploaded.',
+  privacyNoCollection: 'No personal data collection, no analytics tracking, no profiling.',
+  privacyLocalStorageOnly: 'Drafts are stored only in localStorage and can be removed anytime.',
+  repoTitle: 'GitHub Repository',
+  repoLinkText: 'View source on GitHub',
+  styleSuggestionTitle: 'New Style Suggestions',
+  styleSuggestionA: 'Scrapbook style: paper texture, tape stickers, rounded memo cards.',
+  styleSuggestionB: 'Comic panel style: bold outlines with speech-bubble info blocks.',
+  styleSuggestionC: 'Glassmorphism style: translucent cards, soft highlights, gradient background.',
 };
 
 const jaJP: Record<MessageKey, string> = {
@@ -305,6 +341,18 @@ const jaJP: Record<MessageKey, string> = {
   emptyBasicInfo: '基本情報を入力してください',
   untitled: '未設定',
   notFilled: '未入力',
+  pageInfoTitle: 'プロジェクト情報と提案',
+  privacyStatementTitle: 'プライバシー規約',
+  privacyFrontendOnly: '本プロジェクトはフロントエンドのみで、バックエンドはありません。',
+  privacyNoDatabase: 'データベースは使用せず、入力内容はアップロードしません。',
+  privacyNoCollection: '個人情報の収集、分析トラッキング、プロファイリングは行いません。',
+  privacyLocalStorageOnly: '下書きは localStorage のみに保存され、いつでも削除できます。',
+  repoTitle: 'GitHub リポジトリ',
+  repoLinkText: 'GitHub でソースを見る',
+  styleSuggestionTitle: '新スタイル案',
+  styleSuggestionA: '手帳風：紙テクスチャ + テープステッカー + 丸角メモカード。',
+  styleSuggestionB: '漫画コマ風：太いアウトライン + 吹き出し情報ブロック。',
+  styleSuggestionC: 'グラスモーフィズム風：半透明カード + やわらかいハイライト + グラデ背景。',
 };
 
 const catalog: Record<Locale, Record<MessageKey, string>> = {

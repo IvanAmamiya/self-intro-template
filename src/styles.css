@@ -36,6 +36,40 @@ body {
   gap: 16px;
 }
 
+.project-notice {
+  margin-top: 16px;
+}
+
+.project-notice h2 {
+  margin: 0;
+}
+
+.project-notice h3 {
+  margin: 14px 0 8px;
+  font-size: 15px;
+  color: #303752;
+}
+
+.project-notice ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4a5067;
+}
+
+.project-notice li {
+  margin: 6px 0;
+}
+
+.project-notice a {
+  color: #4b3df0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-notice a:hover {
+  text-decoration: underline;
+}
+
 .panel {
   background: #fff;
   border-radius: 16px;
