@@ -34,17 +34,21 @@ const PreviewCanvas = forwardRef<HTMLDivElement, Props>(({ data }, ref) => {
       const baseHeight = data.ratio === '9:16' ? width * (16 / 9) : width;
       const contentHeight = previewNode.scrollHeight;
 
-      setWrapHeight(Math.ceil(Math.max(baseHeight, contentHeight)));
+      setWrapHeight((prev) => {
+        const next = Math.ceil(Math.max(baseHeight, contentHeight));
+        return Math.abs(prev - next) > 1 ? next : prev;
+      });
     };
 
-    updateHeight();
+    const raf = window.requestAnimationFrame(updateHeight);
+    const timer = window.setTimeout(updateHeight, 120);
+    window.addEventListener('resize', updateHeight);
 
-    const resizeObserver = new ResizeObserver(updateHeight);
-    if (wrapRef.current) {
-      resizeObserver.observe(wrapRef.current);
-    }
-
-    return () => resizeObserver.disconnect();
+    return () => {
+      window.cancelAnimationFrame(raf);
+      window.clearTimeout(timer);
+      window.removeEventListener('resize', updateHeight);
+    };
   }, [data, previewNode]);
 
   const bindPreviewRef = (node: HTMLDivElement | null) => {
